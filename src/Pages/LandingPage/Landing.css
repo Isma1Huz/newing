@@ -1,0 +1,24 @@
+.home-text {
+    font-size: 50px;
+    width: 40%;
+    padding-left: 3rem;
+    top: -2rem;
+    position: relative;
+    margin-bottom: -1rem;
+}
+.home-image {
+    z-index: 1;
+    position: relative;
+    top: -28.5rem;
+    float: right;
+    width: 46%;
+    border: 1px solid black;
+    height: 27.5rem;
+    right: -1rem;
+    background-color: url(../../Assets/aeroplace.jpg);
+    background-size: cover;
+    background-position: center;
+}
+body {
+    overflow-x: hidden;
+}

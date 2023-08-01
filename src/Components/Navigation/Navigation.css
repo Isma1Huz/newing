@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    width: 60%; padding-left: 3rem;
+}
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 14rem;
+}
+.navbar ul li {
+    list-style: none;
+    margin-right: 5rem;
+}
+.navbar h2 span , .active{
+    color: blue;
+}
+
