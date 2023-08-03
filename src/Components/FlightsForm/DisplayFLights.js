@@ -57,9 +57,9 @@ const DisplayFlightData = ({ flightData, from, to }) => {
                       <td>{to}</td>
                     </tr>
                     <tr>
-                      <td>{" "}</td>
+                      {/* <td>{" "}</td>
                       <td>{stops}stops{" "}{ time}</td>
-                      <td>{" "}</td>
+                      <td>{" "}</td> */}
                     </tr>
                   </table>
 
@@ -69,7 +69,7 @@ const DisplayFlightData = ({ flightData, from, to }) => {
                     <Accordion className="cabin">
                       <Accordion.Item eventKey="0" >
                         <Accordion.Header className="button" >
-                          {/* <small>Cabin Class</small> */}
+                          <small>Cabin Class</small>
                           <h2>ECONOMY</h2>
                           <span>USD {Math.round((grandTotalPrice  * 1.09) * 10) / 10 } </span>        
                         </Accordion.Header>
