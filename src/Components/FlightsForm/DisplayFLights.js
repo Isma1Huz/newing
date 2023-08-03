@@ -48,13 +48,13 @@ const DisplayFlightData = ({ flightData, from, to }) => {
                   <table>
                     <tr>
                       <td>{timePartes}</td>
-                      <td><img src={plane} className="plane"/></td>
-                      <td>{timePart} </td>
+                      {/* <td><img src={plane} className="plane"/></td> */}
+                      {/* <td>{timePart} </td> */}
                     </tr>
                     <tr>
-                      {/* <td>{from}</td>
+                      <td>{from}</td>
                       <td>{" "}</td>
-                      <td>{to}</td> */}
+                      <td>{to}</td>
                     </tr>
                     <tr>
                       <td>{" "}</td>
