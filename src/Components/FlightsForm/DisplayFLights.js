@@ -59,7 +59,7 @@ const DisplayFlightData = ({ flightData, from, to }) => {
                     <tr>
                       <td>{" "}</td>
                       {/* <td>{stops}stops{" "}{ time}</td> */}
-                      <td>{" "}</td>
+                      {/* <td>{" "}</td> */}
                     </tr>
                   </table>
 
