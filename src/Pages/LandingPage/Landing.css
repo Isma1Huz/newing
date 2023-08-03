@@ -2,23 +2,64 @@
     font-size: 50px;
     width: 40%;
     padding-left: 3rem;
-    top: -2rem;
-    position: relative;
+
     margin-bottom: -1rem;
 }
-.home-image {
-    z-index: 1;
+.lft {
+    width: 100%;
+    top: -20rem;
     position: relative;
-    top: -28.5rem;
-    float: right;
-    width: 46%;
-    border: 1px solid black;
-    height: 27.5rem;
-    right: -1rem;
-    background-color: url(../../Assets/aeroplace.jpg);
-    background-size: cover;
-    background-position: center;
 }
+
+
 body {
     overflow-x: hidden;
+    background-color: #E0D9D9;
+}
+.wrapper {
+    display: flex;
+}
+.home-boxes {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 2rem;
+    padding-top: 7rem;
+    height: 20rem;
+    z-index: 1;
+    left: 45rem;
+    position: relative;
+    width: 40%;
+}
+.box {
+    width: 220px;
+    height: 174px;
+    border-radius: 7px;
+    border: 1px solid black;
+    margin-top: 2rem;
+    padding: 6rem 0 0 1rem;
+    font-weight: bold;
+
+    
+}
+.box h5, .box  p{
+    font-weight: bolder;
+    color: black;
+}
+.a {
+    background: url(../../Assets/Australia.jpeg);
+    background-size: cover;
+
+}
+.b{
+    background: url(../../Assets/canada.jpg);
+    background-size: cover;
+}
+.c {
+    background: url(../../Assets/paris.jpg);
+    background-size: cover;
+}
+.d{
+    background: url(../../Assets/singapore.jpg);
+    background-size: cover;
 }
