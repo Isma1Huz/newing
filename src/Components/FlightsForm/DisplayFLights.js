@@ -54,7 +54,7 @@ const DisplayFlightData = ({ flightData, from, to }) => {
                     <tr>
                       <td>{from}</td>
                       <td>{" "}</td>
-                      <td>{to}</td>
+                      {/* <td>{to}</td> */}
                     </tr>
                     <tr>
                       {/* <td>{" "}</td> */}
