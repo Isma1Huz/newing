@@ -47,7 +47,7 @@ const DisplayFlightData = ({ flightData, from, to }) => {
                 <div className="leftResult">
                   <table>
                     <tr>
-                      <td>{timePartes}</td>
+                      {/* <td>{timePartes}</td> */}
                       {/* <td><img src={plane} className="plane"/></td> */}
                       {/* <td>{timePart} </td> */}
                     </tr>
