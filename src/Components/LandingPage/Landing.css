@@ -1,20 +1,19 @@
+body {
+    overflow-x: hidden;
+    background-color: #E0D9D9;
+}
 .home-text {
     font-size: 50px;
     width: 40%;
+    position: relative;
+    top: -2.5rem;
     padding-left: 3rem;
-
-    margin-bottom: -1rem;
+    margin-bottom: -4.5rem;
 }
 .lft {
     width: 100%;
     top: -20rem;
     position: relative;
-}
-
-
-body {
-    overflow-x: hidden;
-    background-color: #E0D9D9;
 }
 .wrapper {
     display: flex;

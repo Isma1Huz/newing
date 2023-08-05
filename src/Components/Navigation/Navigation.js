@@ -1,17 +1,17 @@
 import  './Navigation.css'
+import { Link } from 'react-router-dom';
 
 function Navigation(){
     return (
-        <>
         <div className="navbar">
-            <h2>Air<span>Line</span></h2>
+            
             <ul>
-                <li className='active'>Home</li>
-                <li>About</li>
-                <li>Contacts</li>
+                <h2>Ticket<span>Ease</span></h2>
+                <li className='active'><Link to="/">Home</Link></li>
+                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/signup">Sign Up</Link></li>
             </ul>
          </div>
-        </>
     )
 
 }

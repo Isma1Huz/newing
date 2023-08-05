@@ -4,7 +4,7 @@
     justify-content: space-between;
     margin-left: 3rem;
 }
-form {
+.form {
     top: -4rem;
     margin-left: 3rem;
     width: 45%;
@@ -55,7 +55,13 @@ form {
     display: grid;
     grid-template-columns: 1fr 1fr ;
     gap: 4rem;
+    transition: height 0.3s ease; 
+    overflow: hidden;
 }
+.expanded {
+    height: 25rem; 
+  }
+  
 .accordion-body {
     position: relative;
     width: 100%;
@@ -81,6 +87,7 @@ small{
 .cabin{
     height: 10rem;
     margin-right: 1rem;
+    z-index: 1;
 }
 .leftResults table tr {
     display: flex;
@@ -142,20 +149,21 @@ td {
     font-size: 16px;
   }
   
-  button {
-    padding: 10px 20px;
-    background-color: #36454f;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+  .buttoning {
+    background-color: #36454f !important;
+    color: #fff !important;
+    border-radius: 10px;
     font-size: 16px;
+    z-index: 0;
     cursor: pointer;
-    transition: background-color 0.3s;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
   }
   
-  button:hover {
-    background-color:  #51bcc2;
-    color: black;
+  .buttoning:hover {
+    background-color:  #51bcc2 !important;
+    color: black !important;
+    scale: 10px;
   }
   
   /* Optional: Adjust the width and style of the form as per your requirement */
@@ -171,3 +179,38 @@ td {
   
 
 
+
+
+  /* Loading animation */
+  .lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 10px;
+    margin: 0.5rem 38rem; 
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-hourglass 1.2s infinite;
+  }
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }

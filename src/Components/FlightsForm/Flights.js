@@ -85,7 +85,6 @@ const FlightSearch = () => {
               setFlightData(data.data);
               setDictionaries(data.dictionaries);
               setLoading(false);
-              // console.log(data);
             })
             .catch((error) => console.error("Error fetching flight data:", error));
         })
@@ -106,7 +105,7 @@ const FlightSearch = () => {
 
   return (
     <>
-      <form class="flight-search-form" onSubmit={handleSubmit}>
+      <form class="flight-search-form form " onSubmit={handleSubmit}>
         <div class="form-row">
           <label for="originLocationCode">Origin:</label>
           <select
@@ -164,11 +163,11 @@ const FlightSearch = () => {
           />
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="button">Submit</button>
       </form>
 
       {/* Show the "Loading..." modal if loading state is true */}
-      {loading && <div className="loading-modal">Loading...</div>}
+      {loading && <div class="lds-hourglass"></div>}
 
       {/* Display flight data after the response is received */}
       {flightData.length > 0 && (

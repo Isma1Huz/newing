@@ -1,16 +1,22 @@
 .navbar {
     display: flex;
-    width: 60%; padding-left: 3rem;
+    width: 60%; padding-left: 2rem;
 }
 .navbar ul {
     display: flex;
     justify-content: space-between;
-    margin-left: 14rem;
+    position: relative;
+    left: -1rem;
 }
 .navbar ul li {
     list-style: none;
     margin-right: 5rem;
 }
+
 .navbar h2 span , .active{
     color: #51bcc2;
 }
+.active {
+    margin-left: 7rem;
+}
+

@@ -3,6 +3,7 @@ import "./Flights.css";
 import { Accordion, Card, Button } from "react-bootstrap";
 import plane from "../../Assets/plane.png" 
 import Modal from 'react-bootstrap/Modal';
+import { Link } from "react-router-dom";
 
 const DisplayFlightData = ({ flightData, from, to }) => {
   const [show, setShow] = useState(false);
@@ -10,7 +11,12 @@ const DisplayFlightData = ({ flightData, from, to }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  console.log(flightData);
+
+  const [expanded, setExpanded] = useState(false);
+
+  const handleExpand = () => {
+    setExpanded((prevState) => !prevState);
+  };
 
   return (
     <div id="ResultContainer"> 
@@ -22,7 +28,7 @@ const DisplayFlightData = ({ flightData, from, to }) => {
           const numberOfBookableSeats = flight.numberOfBookableSeats;
           const oneWay = flight.oneWay;
           const lastTicketingDate = flight.lastTicketingDate
-
+          // Define state to track if accordion is open or closed
           return flight.itineraries.map((itinerary, index) => {
             const { duration } = itinerary;
             const firstDepartureTime = itinerary.segments[0].departure.at;
@@ -43,7 +49,7 @@ const DisplayFlightData = ({ flightData, from, to }) => {
 
 
             return (
-              <li key={id} className="ListItem">
+              <li key={`${id}-${index}`}  className={`ListItem ${expanded ? 'expanded' : ''}`}>
                 <div className="leftResult">
                   <table>
                     <tr>
@@ -68,7 +74,7 @@ const DisplayFlightData = ({ flightData, from, to }) => {
                   
                     <Accordion className="cabin">
                       <Accordion.Item eventKey="0" >
-                        <Accordion.Header className="button" >
+                        <Accordion.Header className="buttoning expandButton" onClick={handleExpand} >
                           <small>Cabin Class</small>
                           <h2>ECONOMY</h2>
                           <span>USD {Math.round((grandTotalPrice  * 1.09) * 10) / 10 } </span>        
@@ -84,16 +90,21 @@ const DisplayFlightData = ({ flightData, from, to }) => {
 
                             <Modal show={show}  onHide={handleClose} animation={false}>
                               <Modal.Header closeButton>
-                                <Modal.Title>Modal heading</Modal.Title>
+                                <Modal.Title>Booking Details</Modal.Title>
                               </Modal.Header>
-                              <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+                              <Modal.Body>You have selected to book a flight with us</Modal.Body>
                               <Modal.Footer>
-                                <Button  onClick={handleClose}>
-                                Cancel Booking
-                                </Button>
-                                <Button onClick={handleClose}>
-                                Confirm Booking
-                                </Button>
+                                  <Button  onClick={handleClose}>
+                                  Cancel Booking
+                                  </Button>
+                                
+                                  <Button>
+                                    <Link to="/registration"> 
+                                    Confirm Booking
+                                    </Link>
+                                  </Button>
+                                
+                               
                               </Modal.Footer>
                             </Modal>
                            
@@ -103,7 +114,7 @@ const DisplayFlightData = ({ flightData, from, to }) => {
                     </Accordion>
                     <Accordion className="cabin">
                       <Accordion.Item eventKey="0">
-                        <Accordion.Header className="button">
+                        <Accordion.Header className="buttoning expandButton" onClick={handleExpand}>
                         <small>Cabin Class</small>
                         <h2>BUSSINESS</h2>
                         <span> USD {(Math.round((grandTotalPrice  * 1.09) * 10) / 10) * 2 }</span>
@@ -120,16 +131,18 @@ const DisplayFlightData = ({ flightData, from, to }) => {
 
                             <Modal show={show}  onHide={handleClose} animation={false}>
                               <Modal.Header closeButton>
-                                <Modal.Title>Modal heading</Modal.Title>
+                                <Modal.Title>Booking</Modal.Title>
                               </Modal.Header>
-                              <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+                              <Modal.Body>You have selected to book a flight with us</Modal.Body>
                               <Modal.Footer>
                                 <Button variant="secondary" onClick={handleClose}>
                                   Cancel booking
                                 </Button>
-                                <Button variant="primary" onClick={handleClose}>
+                               
+                                <Link to="/registration">
+                                  <Button variant="primary" onClick={handleClose}>
                                   Confirm Booking
-                                </Button>
+                                </Button></Link>
                               </Modal.Footer>
                             </Modal>
                           </Accordion.Body>
@@ -152,3 +165,12 @@ const DisplayFlightData = ({ flightData, from, to }) => {
 };
 
 export default DisplayFlightData;
+
+
+
+
+
+
+
+
+

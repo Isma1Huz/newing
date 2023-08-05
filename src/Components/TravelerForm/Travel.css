@@ -1,0 +1,92 @@
+body{
+    background-color:#E0D9D9 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+  
+  /* Styles for the payment container */
+  .payment-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Heading styles */
+   h2 {
+    margin-bottom: 20px;
+  } *
+  
+  
+  /* Styles for the form */
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  /* Label styles */
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  
+  /* Input styles */
+  input[type="text"],
+  button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Styles for success message */
+  .success-message {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #e6f7ff;
+    color: #007bff;
+  }
+  .continue {
+    margin-top: 1rem;
+  }
+  .Back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    width: 10%;
+    background-color: #007bff; 
+    color: #fff; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Styles when the button is hovered */
+  .Back-button:hover {
+    background-color: #0056b3; 
+  }
+  
+  /* Additional styles for disabled button (optional) */
+  .Back-button:disabled {
+    background-color: #c0c0c0; 
+    cursor: not-allowed;
+  }
